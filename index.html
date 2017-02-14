@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>socket.io configuration</title>
+</head>
+<body>
+    <h1>A simple proof of concept project for configuring NGINX, node.js, and socket.io.</h1>
+
+    <!-- include a form for sending messages to the server -->
+    <form onsubmit="return doFormSubmit(this);">
+        <label for="message">Message</label>
+        <input type="text" name="message"></label>
+        <input type="submit">
+    </form>
+
+    <!-- include socket.io and proof of concept -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:5000');
+
+        // emit a join message when the connection is successful
+        socket.on('connect', function() {
+            socket.emit('join', 'Successfully connected to server');
+        });
+
+        // alert a message when reieved from the server
+        // we can do anything we want in this listener
+        socket.on('message', function(data) {
+            alert(data);
+        });
+
+        // sumbit the form value as a message to the server
+        function doFormSubmit(form) {
+            var message = form.elements["message"].value
+
+            socket.emit("message", message);
+            return false;
+        }
+    </script>
+</body>
+</html>

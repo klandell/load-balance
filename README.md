@@ -1,2 +1,2 @@
 # load-balance
-A simple bootstrapping project to configure NGINX, node.js, and socket.io.
+A simple proof of concept project for configuring NGINX, node.js, and socket.io.
