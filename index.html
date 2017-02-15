@@ -6,7 +6,7 @@
     <title>socket.io configuration</title>
 </head>
 <body>
-    <h1>A simple proof of concept project for configuring NGINX, node.js, and socket.io.</h1>
+    <h1>A simple proof of concept project for configuring NGINX, node.js, socket.io, and redis.</h1>
 
     <!-- include a form for sending messages to the server -->
     <form onsubmit="return doFormSubmit(this);">
@@ -18,7 +18,9 @@
     <!-- include socket.io and proof of concept -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        var socket = io.connect('http://localhost:5000');
+        // init socket.io connection, for poc hardcode host and port
+        // localhost:8081 is the location of our NGINX load balancer
+        var socket = io.connect('http://localhost:8081');
 
         // emit a join message when the connection is successful
         socket.on('connect', function() {

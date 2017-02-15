@@ -1,7 +1,7 @@
 {
   "name": "load-balance",
   "version": "1.0.0",
-  "description": "A simple proof of concept project for configuring NGINX, node.js, and socket.io.",
+  "description": "A simple proof of concept project for configuring NGINX, node.js, socket.io, and redis",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,9 @@
   "keywords": [
     "node.js",
     "socket.io",
-    "NGINX"
+    "NGINX",
+    "redis",
+    "Express"
   ],
   "author": "Kyle Landell <kyle.landell@gmail.com>",
   "license": "GPL-3.0",
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/klandell/load-balance#readme",
   "dependencies": {
     "express": "^4.14.1",
+    "redis": "^2.6.5",
     "socket.io": "^1.7.2"
   }
 }
