@@ -2,5 +2,5 @@
 A simple proof of concept project for configuring NGINX, node.js, socket.io, and redis
 
 ##### Items completed:
-* <a style="text-decoration:none;" href="https://google.com" target="_blank">`taskId 1`</a> - testing 1
-* <a style="text-decoration:none;" href="https://yahoo.com.com" target="_blank">`taskId 2`</a> - testing 2
+* [`451836841944902`](https://google.com) - test1
+* [`451836841944908`](https://yahoo.com) - test2
